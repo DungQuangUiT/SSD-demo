@@ -56,7 +56,7 @@ def my_collate_fn(batch):
 
 
 if __name__ == "__main__":
-    classes = ["fish", "jellyfish", "penguin", "sharks", "puffin", "stingray", "starfish"]
+    classes = ["fish", "jellyfish", "penguin", "shark", "puffin", "stingray", "starfish"]
 
     # prepare train, valid, annotation list
     root_path = "./data/Aquarium/"
