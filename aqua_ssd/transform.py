@@ -40,13 +40,13 @@ if __name__ == "__main__":
     train_img_list, train_annotation_list, val_img_list, val_annotation_list = make_datapath_list(root_path)
 
     # read img
-    img_file_path = train_img_list[0]
+    img_file_path = train_img_list[310]
     img = cv2.imread(img_file_path) # Height, Width, Channel(BGR)
     height, width, channels = img.shape
 
     # annotation information
     trans_anno = Anno_xml(classes)
-    anno_info_list = trans_anno(train_annotation_list[0], width, height)
+    anno_info_list = trans_anno(train_annotation_list[310], width, height)
 
     # plot original image
     plt.imshow(cv2.cvtColor(img, cv2.COLOR_BGR2RGB)) # mặc định của matplotlib là RGB
