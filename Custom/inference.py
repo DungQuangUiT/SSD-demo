@@ -3,10 +3,10 @@ from model import SSD
 from transform import DataTransform
 
 
-classes = ["fish", "jellyfish", "penguin", "shark", "puffin", "stingray", "starfish"]
+classes = ["human", "phone", "mask"]
 
 cfg = {
-    "num_classes": 8, #VOC data include 20 class + 1 background class
+    "num_classes": 4, #VOC data include 20 class + 1 background class
     "input_size": 300, #SSD300
     "bbox_aspect_num": [4, 6, 6, 6, 4, 4], # Tỷ lệ khung hình cho source1->source6`
     "feature_maps": [38, 19, 10, 5, 3, 1],
@@ -17,7 +17,7 @@ cfg = {
 }
 
 net = SSD(phase="inference", cfg=cfg)
-net_weights = torch.load("./data/weights/ssd300_90.pth", map_location={"cuda:0":"cpu"})
+net_weights = torch.load("./data/weights/ssd300_200.pth", map_location={"cuda:0":"cpu"})
 net.load_state_dict(net_weights)
 
 def show_predict(img_file_path):
@@ -63,5 +63,5 @@ def show_predict(img_file_path):
 
 
 if __name__ == "__main__":
-    img_file_path = "./data/c.jpg"
+    img_file_path = "./data/weights/a.jpg"
     show_predict(img_file_path)

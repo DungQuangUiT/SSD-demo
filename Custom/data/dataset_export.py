@@ -20,7 +20,7 @@ while cap.isOpened():
 	image = cv2.cvtColor(image, cv2.COLOR_RGB2BGR)
 
 	if cv2.waitKey(1) & 0xFF == ord('e'):
-		cv2.imwrite(os.path.join('data', '{}.jpg'.format(uuid.uuid1())), image)
+		cv2.imwrite(os.path.join('weights', '{}.jpg'.format(uuid.uuid1())), image)
 
 
 	cv2.imshow('Raw Webcam Feed', image)
