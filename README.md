@@ -2,7 +2,7 @@
 This project rebuild the SSD model using the PyTorch framework, configuring it for training on various datasets, including custom-created datasets.
 
 <p align="center">
-  <img src="2_object_detection/#08_SSDmodel.png">
+  <img src="2_object_detection/#08_SSDmodel.png" width=48%>
   SSD model architecture.
 </p>
 
